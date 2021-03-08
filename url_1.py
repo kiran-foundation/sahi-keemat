@@ -56,6 +56,7 @@ tur_dal= soup.find(class_="price")
 tur_dal.find('price')
 print(tur_dal)
 
+print("flipkart-prices")
 
 
 
