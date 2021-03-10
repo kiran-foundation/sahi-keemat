@@ -85,23 +85,6 @@ tur_dal= soup.find(class_="price")
 tur_dal.find('price')
 print(tur_dal)
 
-page = requests.get('https://www.jiomart.com/p/groceries/aashirvaad-whole-wheat-atta-5-kg/490000038').text
-soup = BeautifulSoup(page,'html.parser')
-jiomart_aashirwaad_aata = soup.find(class_="price")
-jiomart_aashirwaad_aata.find('price')
-print(jiomart_aashirwaad_aata)
-
-page = requests.get('https://www.jiomart.com/p/groceries/madhur-pure-hygienic-sugar-5-kg/490861956').text
-soup = BeautifulSoup(page,'html.parser')
-jiomart_madhur_sugar = soup.find(class_="price")
-jiomart_madhur_sugar.find('price')
-print(jiomart_madhur_sugar)
-
-page = requests.get('https://www.jiomart.com/p/groceries/tata-sampann-high-protein-unpolished-tur-arhar-dal-1-kg/490830932').text
-soup = BeautifulSoup(page,'html.parser')
-tur_dal= soup.find(class_="price")
-tur_dal.find('price')
-print(tur_dal)
 
 #Flip-kart-Prices
 print("Flipkart Prices")
@@ -126,5 +109,7 @@ page = requests.get('https://www.flipkart.com/flipkart-supermart-select-toor-dal
 soup = BeautifulSoup(page,'html.parser')
 fk_toor_dal = soup.find(class_="_30jeq3 _16Jk6d")
 print(fk_toor_dal)
+
+
 
 #<span id="final_price">₹ 60.00</span>
