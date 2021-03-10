@@ -104,6 +104,7 @@ tur_dal.find('price')
 print(tur_dal)
 
 #Flip-kart-Prices
+print("Flipkart Prices")
 page = requests.get('https://www.flipkart.com/aashirvaad-superior-mp-atta/p/itm2138546a91477?pid=FLREUC5PSFQUBHTC&lid=LSTFLREUC5PSFQUBHTCW8WKPS&marketplace=GROCERY&iid=97820c6c-0648-44fb-8b88-299fcdeed8eb.FLREUC5PSFQUBHTC.SEARCH').text
 soup = BeautifulSoup(page,'html.parser')
 fk_ashirwaad_aata= soup.find(class_="_3I9_wc _2p6lqe")
