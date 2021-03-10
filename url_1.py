@@ -16,7 +16,7 @@ madhur_sugar = soup.find(class_='_2ifWF')
 #madhur_sugar.find('_2ifWF')
 print(madhur_sugar)
 
-page = requests.get('https://www.bigbasket.com/pd/204005/daawat-basmati-rice-rozana-gold-5-kg-pouch').text
+page = requests.get('https://www.bigbasket.com/pd/255849/daawat-basmati-rice-rozana-gold-1-kg-pouch').text
 soup = BeautifulSoup(page,'html.parser')
 daawat_rozaana = soup.find(class_ ='_2ifWF')
 #daawat_rozaana.find('_2ifWF')
@@ -32,6 +32,12 @@ soup = BeautifulSoup(page,'html.parser')
 jiomart_aashirwaad_aata1= soup.find(class_= "price")
 print(jiomart_aashirwaad_aata1)
 
+page = requests.get('https://www.jiomart.com/p/groceries/madhur-pure-hygienic-sugar-5-kg/490861956').text
+soup = BeautifulSoup(page,'html.parser')
+jiomart_madhur_sugar = soup.find(class_="price")
+#jiomart_madhur_sugar.find('price')
+print(jiomart_madhur_sugar)
+
 page = requests.get('https://www.jiomart.com/p/groceries/daawat-rozana-super-basmati-rice-1-kg/490863714').text
 soup = BeautifulSoup(page,'html.parser')
 jiomart_daawat_rozana= soup.find(class_="price")
@@ -41,12 +47,6 @@ page = requests.get('https://www.jiomart.com/p/groceries/tata-sampann-high-prote
 soup = BeautifulSoup(page,'html.parser')
 jiomart_tatasampann_toordaal= soup.find(class_="price")
 print(jiomart_tatasampann_toordaal)
-
-page = requests.get('https://www.jiomart.com/p/groceries/madhur-pure-hygienic-sugar-5-kg/490861956').text
-soup = BeautifulSoup(page,'html.parser')
-jiomart_madhur_sugar = soup.find(class_="price")
-#jiomart_madhur_sugar.find('price')
-print(jiomart_madhur_sugar)
 
 #tata_sampann_toordal.find('_2ifWF')
 print(tata_sampann_toordal)
@@ -61,11 +61,6 @@ daawat_rozana = soup.find(class_="pdp-product__price--old")
 print(daawat_rozana)
 
 #jiomart
-print("Jiomart-Prices")
-page = requests.get('https://www.jiomart.com/p/groceries/daawat-rozana-super-basmati-rice-1-kg/490863714').text
-soup = BeautifulSoup(page,'html.parser')
-jiomart_daawat_rozana = soup.find(class_="price")
-print(jiomart_daawat_rozana)
 
 page = requests.get('https://www.jiomart.com/p/groceries/aashirvaad-whole-wheat-atta-5-kg/490000038').text
 soup = BeautifulSoup(page,'html.parser')
@@ -78,6 +73,13 @@ soup = BeautifulSoup(page,'html.parser')
 jiomart_madhur_sugar = soup.find(class_="price")
 jiomart_madhur_sugar.find('price')
 print(jiomart_madhur_sugar)
+
+print("Jiomart-Prices")
+page = requests.get('https://www.jiomart.com/p/groceries/daawat-rozana-super-basmati-rice-1-kg/490863714').text
+soup = BeautifulSoup(page,'html.parser')
+jiomart_daawat_rozana = soup.find(class_="price")
+print(jiomart_daawat_rozana)
+
 
 page = requests.get('https://www.jiomart.com/p/groceries/tata-sampann-high-protein-unpolished-tur-arhar-dal-1-kg/490830932').text
 soup = BeautifulSoup(page,'html.parser')
@@ -100,7 +102,7 @@ soup = BeautifulSoup(page,'html.parser')
 fk_madhur_sugar = soup.find(class_="_3I9_wc _2p6lqe")
 print(fk_madhur_sugar)
 
-page = requests.get('https://www.flipkart.com/daawat-rozana-super-basmati-rice-medium-grain/p/itmf786kvkpc2gzy?pid=RICEUC2Y2FPTSNU9&lid=LSTRICEUC2Y2FPTSNU9JPDYCC&marketplace=GROCERY&iid=38e00334-d786-4a86-9664-8a9f42fe3274.RICEUC2Y2FPTSNU9.SEARCH').text
+page = requests.get('https://www.flipkart.com/daawat-rozana-gold-basmati-rice-medium-grain/p/itm87d2a5d167c48?pid=RICEUC2YGGQJTXHD&lid=LSTRICEUC2YGGQJTXHDITCFX4&marketplace=GROCERY&iid=9304c4ac-3778-46cb-9572-14938e0b5dc0.RICEUC2YGGQJTXHD.SEARCH').text
 soup = BeautifulSoup(page,'html.parser')
 fk_dawat_rozana = soup.find(class_="_3I9_wc _2p6lqe")
 print(fk_dawat_rozana)
