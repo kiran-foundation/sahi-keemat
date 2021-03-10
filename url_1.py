@@ -105,9 +105,9 @@ soup = BeautifulSoup(page,'html.parser')
 fk_dawat_rozana = soup.find(class_="_3I9_wc _2p6lqe")
 print(fk_dawat_rozana)
 
-page = requests.get('https://www.flipkart.com/flipkart-supermart-select-toor-dal-split/p/itmf2ujjpnsasqzv?pid=PLSEXBGTFTVU23FQ&lid=LSTPLSEXBGTFTVU23FQTWWU5S&marketplace=GROCERY&iid=987edc55-da48-4886-af5a-5dbfda6f5aa8.PLSEWWBTMKE2N362.SEARCH').text
+page = requests.get('https://www.flipkart.com/tata-sampann-toor-dal-1-kg-moong/p/itm8006fc6fe0be1?pid=PLSFQAYUWYVDZECN&lid=LSTPLSFQAYUWYVDZECN0FOQZK&marketplace=GROCERY&iid=08c05eea-e9dc-402c-be71-c2e2b5ad36b4.PLSFQAYUWYVDZECN.SEARCH').text
 soup = BeautifulSoup(page,'html.parser')
-fk_toor_dal = soup.find(class_="_30jeq3 _16Jk6d")
+fk_toor_dal = soup.find(class_="_3I9_wc _2p6lqe")
 print(fk_toor_dal)
 
 
