@@ -113,7 +113,7 @@ print(fk_ashirwaad_aata)
 
 page = requests.get('https://www.flipkart.com/madhur-sugar/p/itmevjgp3vsgg77p?pid=SUGEUHHJAFPW8WKF&lid=LSTSUGEUHHJAFPW8WKFOHV5OR&marketplace=GROCERY&iid=0b60fb86-688b-43a0-9e7c-4ed44cc8c731.SUGEUD25B6YCCNGM.SEARCH').text
 soup = BeautifulSoup(page,'html.parser')
-fk_madhur_sugar = soup.find(class_ = "_3I9_wc_2p6Lqe")
+fk_madhur_sugar = soup.find(class_="_3I9_wc _2p6lqe")
 print(fk_madhur_sugar)
 
 #<span id="final_price">₹ 60.00</span>
