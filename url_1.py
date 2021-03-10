@@ -116,4 +116,14 @@ soup = BeautifulSoup(page,'html.parser')
 fk_madhur_sugar = soup.find(class_="_3I9_wc _2p6lqe")
 print(fk_madhur_sugar)
 
+page = requests.get('https://www.flipkart.com/daawat-rozana-super-basmati-rice-medium-grain/p/itmf786kvkpc2gzy?pid=RICEUC2Y2FPTSNU9&lid=LSTRICEUC2Y2FPTSNU9JPDYCC&marketplace=GROCERY&iid=38e00334-d786-4a86-9664-8a9f42fe3274.RICEUC2Y2FPTSNU9.SEARCH').text
+soup = BeautifulSoup(page,'html.parser')
+fk_dawat_rozana = soup.find(class_="_3I9_wc _2p6lqe")
+print(fk_dawat_rozana)
+
+page = requests.get('https://www.flipkart.com/flipkart-supermart-select-toor-dal-split/p/itmf2ujjpnsasqzv?pid=PLSEXBGTFTVU23FQ&lid=LSTPLSEXBGTFTVU23FQTWWU5S&marketplace=GROCERY&iid=987edc55-da48-4886-af5a-5dbfda6f5aa8.PLSEWWBTMKE2N362.SEARCH').text
+soup = BeautifulSoup(page,'html.parser')
+fk_toor_dal = soup.find(class_="_30jeq3 _16Jk6d")
+print(fk_toor_dal)
+
 #<span id="final_price">₹ 60.00</span>
