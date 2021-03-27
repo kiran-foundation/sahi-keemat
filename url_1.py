@@ -7,9 +7,10 @@ print('Big-Basket-Prices')
 page = requests.get('https://www.bigbasket.com/pd/126903/aashirvaad-atta-whole-wheat-5-kg-pouch/?nc=as&q=aashirwad').text
 soup = BeautifulSoup(page,'html.parser')
 Bb_aashirwaad_aata = soup.find(class_="tQ1Iy")
-print(Bb_aashirwaad_aata)
+print(dir(Bb_aashirwaad_aata))
+print(Bb_aashirwaad_aata.text)
 #aashirwaad_aata1.find('')
-
+''''
 page = requests.get('https://www.bigbasket.com/pd/214431/madhur-sugar-refined-5-kg-pouch/?nc=as&q=madhur').text
 soup = BeautifulSoup(page,'html.parser')
 madhur_sugar = soup.find(class_='_2ifWF')
@@ -71,7 +72,7 @@ soup = BeautifulSoup(page,'html.parser')
 fk_madhur_sugar = soup.find(class_="_3I9_wc _2p6lqe")
 print(fk_madhur_sugar)
 
-page = requests.get('https://www.flipkart.com/daawat-rozana-gold-basmati-rice-medium-grain/p/itm87d2a5d167c48?pid=RICEUC2YGGQJTXHD&lid=LSTRICEUC2YGGQJTXHDITCFX4&marketplace=GROCERY&iid=9304c4ac-3778-46cb-9572-14938e0b5dc0.RICEUC2YGGQJTXHD.SEARCH').text
+page = requests.get(https://www.flipkart.com/daawat-rozana-gold-basmati-rice-medium-grain/p/itm87d2a5d167c48?pid=RICEUC2YGGQJTXHD&lid=LSTRICEUC2YGGQJTXHDITCFX4&marketplace=GROCERY&q=daawat+rozana+gold+basmati+rice&store=eat%2Fyul&srno=s_1_2&otracker=AS_QueryStore_OrganicAutoSuggest_2_12_sc_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_2_12_sc_na_na&fm=SEARCH&iid=6761dc6b-e628-4b5f-8064-2bbd9ca6589e.RICEUC2YGGQJTXHD.SEARCH&ppt=sp&ppn=sp&ssid=tthg94h5680000001615895215977&qH=91caef11422b600e.text
 soup = BeautifulSoup(page,'html.parser')
 fk_dawat_rozana = soup.find(class_="_3I9_wc _2p6lqe")
 print(fk_dawat_rozana)
@@ -84,3 +85,4 @@ print(fk_toor_dal)
 
 
 #<span id="final_price">₹ 60.00</span>
+'''
