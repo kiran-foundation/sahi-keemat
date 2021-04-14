@@ -106,7 +106,7 @@ obj.writerows(products)
 #converted_price = float(re.sub(r"[^\d.]", "", Bb_aashirwaad_aata))
 f.write('https://www.bigbasket.com/pd/126903/aashirvaad-atta-whole-wheat-5-kg-pouch/?nc=as&q=aashirwad')
 f.write('\t')
-f.write('Bb_aashirwaad_aata')
+f.write(str("Bb_aashirwaad_aata"))
 f.write("\n")
 
 
@@ -144,6 +144,10 @@ soup = BeautifulSoup(page,'html.parser')
 madhur_sugar = soup.find(class_='_2j_7u')
 #madhur_sugar.find('_2ifWF')
 print(madhur_sugar)
+csvfile = open('Sugar_Url_Prices.csv', 'w', newline='')
+fields = list(products[0].keys())
+obj = csv.DictWriter(csvfile,fieldnames=fields)
+obj.writeheader()
 f1.write('sugar' )
 f1.write('https://www.bigbasket.com/pd/214431/madhur-sugar-refined-5-kg-pouch/?nc=as&q=madhur' )
 f1.write(str(madhur_sugar))
@@ -176,7 +180,12 @@ soup = BeautifulSoup(page,'html.parser')
 daawat_rozaana = soup.find(class_ ='_2j_7u')
 #daawat_rozaana.find('_2ifWF')
 print(daawat_rozaana)
-
+urldict = {}
+products = [{'p_name': ' ', 'price':" " , 'source': " "}]
+csvfile = open('rice_Url_Prices.csv', 'w', newline='')
+fields = list(products[0].keys())
+obj = csv.DictWriter(csvfile,fieldnames=fields)
+obj.writeheader()
 f2.write('https://www.bigbasket.com/pd/255849/daawat-basmati-rice-rozana-gold-1-kg-pouch' )
 f2.write(str(daawat_rozaana))
 f2.write("\n")
@@ -208,6 +217,12 @@ page = requests.get('https://www.bigbasket.com/pd/40000291/tata-sampann-toor-dal
 soup = BeautifulSoup(page,'html.parser')
 tata_sampann_toordal = soup.find(class_='_2j_7u')
 print(tata_sampann_toordal)
+urldict = {}
+products = [{'p_name': ' ', 'price':" " , 'source': " "}]
+csvfile = open('Dal_Url_Prices.csv', 'w', newline='')
+fields = list(products[0].keys())
+obj = csv.DictWriter(csvfile,fieldnames=fields)
+obj.writeheader()
 
 f2.write('https://www.bigbasket.com/pd/40000291/tata-sampann-toor-dal-1-kg' )
 f2.write(str(tata_sampann_toordal))
