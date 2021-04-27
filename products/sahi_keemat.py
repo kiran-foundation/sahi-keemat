@@ -2,6 +2,7 @@ from csv import reader,DictReader,DictWriter,writer
 from operator import itemgetter
 import re
 import requests
+import csv
 from bs4 import BeautifulSoup
 
 
@@ -54,3 +55,11 @@ def flip_kart_get_price(url):
      # fk_product_price = (soup.div.text)
  fk_price = get_converted_price(fk_product_price)
  return fk_price
+
+def new_csv(file_path):
+ fieldnames = ['product_name', 'source', 'price']
+ with open(file_path ,"w") as csvfile:
+  writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+  writer.writeheader()
+
+ return

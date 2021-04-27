@@ -259,6 +259,7 @@ f2.write('https://www.flipkart.com/daawat-rozana-gold-basmati-rice-medium-grain/
 #f.write(str(fk_dawat_rozana))
 f2.write("\n")
 f2.close()
+
 f3 = open("Dal_Url_Prices.csv","w")
 page = requests.get('https://www.bigbasket.com/pd/40000291/tata-sampann-toor-dal-1-kg').text
 soup = BeautifulSoup(page,'html.parser')

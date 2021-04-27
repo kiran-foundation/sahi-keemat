@@ -99,3 +99,40 @@ def append_data(file_path,source,price):
       "source": source,
       "price":  price
      })
+ return
+
+def product_value(file): #getting the value(url) for the key(product) and passing it in the price functions
+
+ reader = csv.reader(open('url_list.csv', 'r'))
+
+ product_list = {}
+ for row in reader:
+  k , v = row
+  product_list[k] = v
+ #print(product_list)
+
+ key= list(product_list.keys())[0] # getting the key by passing the index
+ #key , val = product_list.items()[0]
+
+ # printing result
+ print("The 1st key of dictionary is : " + str(key))
+ #print("The 1st value of dictionary is : " + str(val))
+
+ a= product_list['bb_a'] #getting the value
+ print(a)
+ bb_get_price(a) # getting error     raise InvalidSchema("No connection adapters were found for {!r}".format(url))
+                 #requests.exceptions.InvalidSchema: No connection adapters were found for "'https://www.bigbasket.com/pd/126903/aashirvaad-atta-whole-wheat-5-kg-pouch/?nc=as&q=aashirwad'"
+
+# working on the following code #
+ if product_list[k] == 'bb_a':
+   a1 = product_list['bb_a']
+   bb_get_price(a1)
+
+ if product_list[k] == 'jio_a':
+   a2= product_list('jio_a')
+   jio_get_price(a2)
+
+ print(min(a1, a2))
+
+ return
+

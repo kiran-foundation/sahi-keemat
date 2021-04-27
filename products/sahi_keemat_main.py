@@ -2,17 +2,18 @@ import csv
 from csv import reader,DictReader,DictWriter,writer
 from operator import itemgetter
 
-from sahi_keemat_functions import bb_get_price,jio_get_price,flip_kart_get_price,get_converted_price,new_csv,append_data
+from sahi_keemat_functions import bb_get_price,jio_get_price,get_converted_price,new_csv,append_data,product_value
 
 
+product_value("url_list.csv")
 
-new_csv("aata1.csv")
+new_csv("atta.csv")
 
 #url= 'https://www.jiomart.com/p/groceries/aashirvaad-whole-wheat-atta-5-kg/490000038'
 url_a = 'https://www.bigbasket.com/pd/126903/aashirvaad-atta-whole-wheat-5-kg-pouch/?nc=as&q=aashirwad'
-append_data("aata1.csv",url_a,str(bb_get_price(url_a)))
+append_data("atta.csv",url_a,str(bb_get_price(url_a)))
 url_a1= 'https://www.jiomart.com/p/groceries/aashirvaad-whole-wheat-atta-5-kg/490000038'
-append_data("aata1.csv",url_a1,str(jio_get_price(url_a1)))
+append_data("atta.csv",url_a1,str(jio_get_price(url_a1)))
 
 test_dict = {url_a:str(bb_get_price(url_a)),url_a1:str(jio_get_price(url_a1))}
 print(test_dict)
