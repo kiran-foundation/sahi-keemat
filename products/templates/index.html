@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Sahi-Keemat</title>
+    <meta charset="UTF-8">
+    <title>sahi keemat</title>
+    <link rel="stylesheet" href="/static/style.css"/>
+    <style>
+    table, th, td
+    {
+    border: 1px solid black;
+    border-collapse: collapse;
+    }
+    table.center {
+    margin-left: auto;
+   margin-right: auto;
+   }
+   </style>
+</head>
+
+<body background="static/SAHI KEEMAT.jpg" >
+<table class="table table-bordered">
+    <table background="static/SAHI KEEMAT.jpg"/>
+
+<thead>
+                        <tr>
+                            <th>Site Name</th>
+                            <th>Url</th>
+                            <th>Product-Price</th>
+
+                        </tr>
+                    </thead>
+    <tbody>
+    {% for item, components_data in test_dict.items() %}
+   <tr>
+        <td>{{ key }} </td>
+        <td>{{value}}</td>
+   </tr>
+    {% endfor %}
+    <tr>
+   {% for sub_components, sub_comp_dat in test_dict.items()%}
+
+<td>{{sub_components}}</td>
+                        <td>{{ sub_comp_dat[0] }}</td>
+                        <td>{{ sub_comp_dat[1] }}</td>
+                        </tr>
+   {% endfor %}
+
+     </tbody>
+</table>
+</body>
+</html>
