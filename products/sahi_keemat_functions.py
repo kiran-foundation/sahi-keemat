@@ -6,6 +6,7 @@ import regex
 import re
 import requests
 from bs4 import BeautifulSoup
+import os
 
 
 
@@ -138,6 +139,20 @@ def product_value(file):  # getting the value(url) for the key(product) and pass
  print(min_price)
 
  return test_dict
+
+def product_details():
+ path = "C:/Users/Dell/PycharmProjects/sahi-keemat/products/csv_files"
+ items = os.listdir(path)
+
+ for i in range(len(items)):
+       print(items[i])
+       product_value(items[i]) #(here facing problem,not reading the CSV file)
+       ''' (following error is coming) - reader = csv.reader(open(file, 'r'))
+FileNotFoundError: [Errno 2] No such file or directory: 'aata_new.csv'''
+
+ return
+
+product_details()
 
 
 '''
