@@ -7,11 +7,10 @@ from sahi_keemat_functions import product_value
 app = Flask(__name__)
 
 headings = ("SiteName", "Url", "Price")
-data = product_value("aata_new.csv")
+data = product_value("csv_files/aata_new.csv")
+
 
 #test_dict={list(product_list.keys())[0]: (a1,str(bb_price)),list(product_list.keys())[1]: (a2,str(jio_price))}
-
-
 
 @app.route('/')
 def post():
