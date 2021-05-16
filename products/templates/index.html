@@ -3,6 +3,8 @@
 <head>
     <title>Sahi-Keemat</title>
     <meta charset="UTF-8">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
     <title>sahi keemat</title>
     <link rel="stylesheet" href="/static/style.css"/>
     <style>
@@ -24,14 +26,14 @@
 </head>
 
 <body background="static/SAHI KEEMAT.jpg" >
-<table class="table table-bordered">
+<table class="table table-sm">
     <table background="static/SAHI KEEMAT.jpg"/>
 
 <thead>
                         <tr>
-                            <th>Site Name</th>
-                            <th>Url</th>
-                            <th>Product-Price</th>
+                            <th><h6>Site Name</h6></th>
+                            <th><h6 align="center"> Url </h6> </th>
+                            <th><h6>Product-Price</h6></th>
 
                         </tr>
                     </thead>
@@ -46,7 +48,8 @@
    {% for sub_components, sub_comp_dat in test_dict.items()%}
 
 <td>{{sub_components}}</td>
-                        <td>{{ sub_comp_dat[0] }}</td>
+
+                        <td><a href="{{ sub_comp_dat[0] }}">{{ sub_comp_dat[0] }}</a></td>
                         <td>{{ sub_comp_dat[1] }}</td>
                         </tr>
    {% endfor %}
