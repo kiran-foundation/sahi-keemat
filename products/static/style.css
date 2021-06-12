@@ -1,21 +1,75 @@
+
+  table, th, td
+    {
+    border: 1px solid black;
+    border-collapse: collapse;
+    }
+    table.center
+    {
+   margin-left: auto;
+   margin-right: auto;
+   }
+
 body {
- background-image: "static/SAHI KEEMAT.jpg";
- background-color: #cccccc;
+
+ background-image: "static/sahi-keemat.png";
+ background-color: #EB1E7E;
+ overflow: scroll;
+
 
 }
 table{
    border-spacing: 0;
    margin: 1rem;
-   background color: #f5f5f5;
+   background color: #79CCF6
 }
+<style >
+  	.hoverTable{
+		width:100%;
+		border-collapse:collapse;
+	}
+	.hoverTable td
+	{
+		padding:7px; border:#4e95f4 1px solid;
+	}
+	/* Define the default color for all the table rows */
+	.hoverTable tr{
+		background: #EB1E7E;
+	}
+	/* Define the hover highlight color for the table row */
+    .hoverTable tr:hover {
+          background-color: #ffff99;
+    }
+</style>
 
 tr {
    background-color: #e5e5e5;
 }
 
 .table__header {
-      text-align: left;
+      text-align: center;
 }
 .table__cell{
-      padding: 12px;
+padding: 20px;
+}
+
+
+tr{
+   background-color: #79CCF6;
+}
+
+.table__header{
+      text-align: center;
+}
+.table__cell{
+      padding: 8px;
+}
+.image {
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:black;
+    background-image: "static/SAHI KEEMAT.jpg";
+    background-size:cover;
+    overflow-y: scroll;
 }
