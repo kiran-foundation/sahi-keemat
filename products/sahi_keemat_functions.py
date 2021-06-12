@@ -143,16 +143,15 @@ def product_value(file):  # getting the value(url) for the key(product) and pass
 def product_details():
  path = "C:/Users/Dell/PycharmProjects/sahi-keemat/products/csv_files"
  items = os.listdir(path)
+ products_data = {}
 
- for i in range(len(items)):
-       print(items[i])
-       product_value(items[i]) #(here facing problem,not reading the CSV file)
-       ''' (following error is coming) - reader = csv.reader(open(file, 'r'))
-FileNotFoundError: [Errno 2] No such file or directory: 'aata_new.csv'''
+ for file in items:
 
- return
+  product_info= product_value(path+file)
+  products_data[file] = product_info
+     
+ return products_data
 
-product_details()
 
 
 '''
