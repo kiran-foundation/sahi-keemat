@@ -2,16 +2,19 @@
 <html lang="en">
 <head>
 
+
 <title> SAHI-KEEMAT </title>
     <div style="text-align: center;">
-  <img src="\static\sahi-keemat.png" height="300" width="350">
+
+        <td><h6 align="right"> <b> <a href="/about" > <font color = "#330019"> ABOUT US </font> </a> </b></h6></td>
+        <img src="\static\sahi-keemat.png" height="300" width="350">
 
     </div>
 <meta charset="UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
 
 <!--===============================================================================================-->
 <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
@@ -34,65 +37,74 @@
     <style width="100%">
 
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-.table-striped>tbody>tr:nth-child(odd)>td,
-.table-striped>tbody>tr:nth-child(odd)>th {
-   background-color: #C49F0F;
-}
+     <style>
+    .table-striped>tbody>tr:nth-child(odd)>td,
+    .table-striped>tbody>tr:nth-child(odd)>th
+     { background-color: #EAF2F8;}
 
-.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
-  background-color: #DFB5F8;
-}
+    .table-hover tbody tr:hover td, .table-hover tbody tr:hover th
+    { background-color: #FFFFFF;}
 
     table, th, td
     {
-    border: 4px solid brown;
-    cellpadding: 4;
+     bgcolor:#FFFFFF
+     border: 4px solid black;
+     cellpadding: 4;
      cellspacing: 0;
     }
 
    </style>
 </head>
-<body style="background-color:#CCFFFF;">
+<body style="background-color:#FEF9E7;">
 
 <div align="center" class="limiter">
-    {% for key, values in test_dict.items() %}
-     <th align="center" > <b>{{ key }}</b></font></th>
+    {% for key, values in product_dict.items() %}
+
+<th align="center" > <b>{{key.strip(",.csv")}}</b></th>
+
+
+
 <div class="container-table100">
 <div class="wrap-table100">
 <div class="table100 ver1 m-b-110">
 
-<table data-vertable="ver1" style="background-color:#D7A2F6"  >
-    <table  class="table table-striped table-hover" align="center" width="1000" height="1000">
+<table data-vertable="ver1" style="background-color:#B9F3D0" bgcolor="B9F3D0" >
+ <table  class="table table-striped table-hover" align="center" width="1000" height="1000">
 
 <tbody>
 <thead>
-<tr class="row100 head" >
-
+<tr class="row100 head"  >
+<th class="column100 column2" data-column="column2" align="center">Site_Name</th>
 <th class="column100 column2" data-column="column2" align="center">URL</th>
 <th class="column100 column3" data-column="column3" align="center">Price</th>
 
-
 </tr>
 </thead>
-{% for url,price in values.values() %}
 
-       <tr>
-           <td align="center" style="border-left :  solid brown; border-top : solid brown ; border-bottom : solid brown">
-               <table border="1" cellspacing="0" cellpadding="4"></table>
-          <a href={{url}} target="_blank"> View Product</a>
-             &nbsp; </td>
-         <td align="center" style="border-left : solid brown; border-top : solid brown ; border-bottom : solid brown">
-             <table border="1" cellspacing="0" cellpadding="4"></table>
-           {{ price }}
+   {% for site_name in values.keys() %}
+     <tr>
+         <td>{{site_name}}</td>
+
+             <td> <table border="1" cellspacing="0" cellpadding="4"></table>
+              <a href={{values[site_name][0]}} target="_blank"> View Product</a>
+            &nbsp; </td>
+
+            <td><table border="1" cellspacing="0" cellpadding="4"></table>
+           {{ values[site_name][1]}}
         &nbsp;</td>
 
-      </tr>
-        {% endfor %}
 
+           </td>
+
+     </tr>
+
+
+{%endfor%}
 
 </tbody>
+
 </table>
+
 </table>
 </div>
 </div>
@@ -124,4 +136,5 @@
 
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"rayId":"65d96922de9119f1","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2021.5.2","si":10}'></script>
 </body>
+
 </html>
