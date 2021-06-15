@@ -83,20 +83,20 @@ def product_value(file):  # getting the value(url) for the key(product) and pass
  for row in reader:
   k, v = row
   product_list[k] = v
- print(product_list)
+ #print(product_list)
 
  key = list(product_list.keys())[0]  # getting the key by passing the index
  
- print("The 1st key of dictionary is : " + str(key))
+ #print("The 1st key of dictionary is : " + str(key))
  
  a1 = product_list['bigbasket']
  bb_price = bb_get_price(a1)
- print(product_list['bigbasket'] + ":" + str(bb_price))
+ #print(product_list['bigbasket'] + ":" + str(bb_price))
 
  
  a2 = product_list['jiomart']
  jio_price = jio_get_price(a2)
- print(product_list['jiomart'] + ":" + str(jio_price))
+ #print(product_list['jiomart'] + ":" + str(jio_price))
 
  test_dict = {list(product_list.keys())[0]: (a1, str(bb_price)), list(product_list.keys())[1]: (a2, str(jio_price))}
  #print(test_dict)
