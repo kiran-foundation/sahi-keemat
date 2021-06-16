@@ -60,7 +60,8 @@
 <div align="center" class="limiter">
     {% for key, values in product_dict.items() %}
 
-<th align="center" > <b>{{key.strip(",.csv")}}</b></th>
+<th align="center" > <font size="6"> <b><u>{{key.strip(",.csv")}}</u></b></font></th>
+
 
 
 <div class="container-table100">
@@ -82,30 +83,35 @@
 
    {% for site_name in values.keys() %}
      <tr>
-         <td>{{site_name}}</td>
-
-             <td> <table border="1" cellspacing="0" cellpadding="4"></table>
+         <td align="center">{{site_name}}</td>
+             <td align="center"> <table border="1" cellspacing="0" cellpadding="4"></table>
               <a href={{values[site_name][0]}} target="_blank"> View Product</a>
-            &nbsp; </td>
+             &nbsp;&nbsp; </td>
 
-            <td><table border="1" cellspacing="0" cellpadding="4"></table>
+            <td align="center"><table border="1" cellspacing="0" cellpadding="4"></table>
            {{ values[site_name][1]}}
         &nbsp;</td>
 
 
            </td>
+
      </tr>
+
 
 {%endfor%}
 
 </tbody>
+
 </table>
+
 </table>
 </div>
 </div>
 </div>
      {% endfor %}
 </div>
+
+
 
 
 <!--===============================================================================================-->
