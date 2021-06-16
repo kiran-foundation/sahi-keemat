@@ -3,7 +3,7 @@ import flask
 import jinja2
 import csv_files
 from flask import Flask,render_template
-from sahi_keemat_functions import product_value,product_details
+from sahi_keemat_functions import product_details
 
 app = Flask(__name__)
 
