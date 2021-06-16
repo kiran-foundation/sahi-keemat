@@ -108,7 +108,7 @@ def product_value(file):  # getting the value(url) for the key(product) and pass
 
  
 def product_details():
- path = "C:/Users/Dell/PycharmProjects/sahi-keemat/products/csv_files"
+ path = "csv_files\\"
  items = os.listdir(path)
  products_data = {}
 
